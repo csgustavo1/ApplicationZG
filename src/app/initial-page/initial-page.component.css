@@ -1,0 +1,18 @@
+#borda{
+    border-style: inset;
+    border-color: black;
+    background-color: #0375b8;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+    color:white;
+    
+}
+
+#fontes {
+    color:white;
+}
+
+
+
