@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "app-zg"
+  "defaultProject": "app-zg",
+  "cli": {
+    "analytics": false
+  }
 }
