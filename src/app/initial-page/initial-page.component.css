@@ -7,13 +7,73 @@
     border-right: none;
     padding: 20px;
     color:white;
+    font-size: large;
+    font-style: italic;
+    
+    
+    
     
 }
+
+.sombra:hover{
+    transition-property: all;
+}
+
+
 
 #fontes {
     color:white;
     font-style: italic;
+    font-size: large;
 }
 
+.wrapper {
+    display: grid;
+    background-color: rgb(3, 2, 2);
+    grid-auto-rows: 200px;
+  }
+
+ 
+.transicao:hover{
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+
+
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-style: italic;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border-radius: 2px;
+  
+    
+}
+
+.button:hover{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-style: italic;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border-radius: 2px;
+}
+
+  
+ 
 
 
