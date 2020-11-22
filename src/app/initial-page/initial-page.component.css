@@ -1,7 +1,7 @@
 #borda{
     border-style: inset;
-    border-color: black;
     background-color: #0375b8;
+    border-color: black;  
     border-top: none;
     border-left: none;
     border-right: none;
@@ -59,9 +59,23 @@
 .button:active{
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
-    transform: translateY(50px);
+    transform: translateY(10px);
 }
 
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu main main main right right'
+      'menu footer footer footer footer footer';
+    grid-gap: 10px;
+    background-color: #16b874;
+    padding: 10px;
+  }
+
+  .item1 { grid-area: header; }
+
+  
 
 
 
