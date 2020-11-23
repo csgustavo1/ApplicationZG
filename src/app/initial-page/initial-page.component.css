@@ -1,12 +1,13 @@
 #borda{
     border-style: inset;
-    background-color: #0375b8;
+    background-color:#50c878;
     border-color: black;  
     border-top: none;
     border-left: none;
     border-right: none;
-    padding: 20px;
+    padding: 5px;
     color:white;
+    text-align: center;
     font-size: large;
     font-style: italic;
     
@@ -36,7 +37,7 @@
 
  
 .button:hover{
-    background-color: #4CAF50; /* Green */
+  background-color:#50c878;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   
 }
@@ -50,7 +51,7 @@
     font-size: 16px;
     display:inline-block;
     font-style: italic;
-    width: 250px;
+    width: 220px;
     float:left;
     cursor:pointer;
     
@@ -62,18 +63,29 @@
     transform: translateY(10px);
 }
 
-.grid-container {
-    display: grid;
-    grid-template-areas:
-      'header header header header header header'
-      'menu main main main right right'
-      'menu footer footer footer footer footer';
-    grid-gap: 10px;
-    background-color: #16b874;
-    padding: 10px;
-  }
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-  .item1 { grid-area: header; }
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  background-color: white;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
 
   
 
