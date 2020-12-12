@@ -7,11 +7,11 @@
 </div>
 
 <div>
-  <form class="form" action="">
+  <form class="form" action="ABCD3">
     <label>Informe o código da ação que deseja: </label>
     <input class="but-input" type='text' name='ABCD3' placeholder="ABCD3">
-    <div class="but-card">
-      <button type="submit">Pesquisar</button>
+    <div>
+      <button class="but-card" type="submit">Pesquisar</button>
         </div>
   </form>
 </div>
@@ -19,79 +19,36 @@
   
 <div id="fontes">
     <p>Abaixo será calculado e exibido os rendimentos em R$ e % respectivamente.</p>
+
 </div>
 
-<table id="customers">
-    <tr>
-      <th>Data</th>
-      <th>R$</th>
-      <th>%</th>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
+
+
+<table>
+  <tr>
+    <th>Company</th>
+  </tr>
+  <tr *ngFor="let CrudServices of data">
+    <td>{{CrudServices | json}}</td>
+  </tr>
+</table>
 
 
 <div>
-    <form>
-        
-        <input type="button" class="button" value="Calcular Rendimentos">
-        
+    <form>   
+          
     </form>
+
+   
+
 </div>
 
-<div>
-    <form>
-        
-        <input type="button" class="button"   value="Limpar tela">
-       
-    </form>
-</div>
+
+
+
+
+
+
+
+
+
