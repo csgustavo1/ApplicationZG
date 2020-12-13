@@ -1,5 +1,12 @@
 # AppZg
 
+
+Para executar o Front end utilize o comando npm start.
+Para executar o back end utilize o comando npm run dev.
+
+A aplicação está rodando na porta 4200 para Angular e porta 3000 para a API.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
 
 ## Development server

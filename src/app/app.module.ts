@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { InitialPageComponent } from './initial-page/initial-page.component';
 import { CadastroUsuarioComponent } from './components/usuarios/cadastro-usuario/cadastro-usuario.component';
 import { routing } from './initial-page/app-routes';
-import { DadosService } from './initial-page/dados-service';
+
+
 
 
 
@@ -30,7 +31,8 @@ declare module "@angular/core" {
   imports: [
     BrowserModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+  
   
 
   

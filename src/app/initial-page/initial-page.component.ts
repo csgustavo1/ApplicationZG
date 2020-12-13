@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Images } from '../models/placeholder-model';
 import { CrudServices } from './services/crud-services';
 import {CommonModule} from '@angular/common/';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -15,14 +15,20 @@ import {CommonModule} from '@angular/common/';
 export class InitialPageComponent implements OnInit {
 
 
-  data: CrudServices[];
+  //data: CrudServices[];
+
+  data$: Observable<CrudServices[]>;
 
   constructor(private services: CrudServices){}
 
- 
   ngOnInit(){
-    this.services.list().subscribe(dados => this.data = dados);
+    //this.services.list().subscribe(dados => this.data = dados);
+
+
+    this.data$ = this.services.list();
   }
+
+  
 
   
 

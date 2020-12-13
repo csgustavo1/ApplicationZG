@@ -7,30 +7,32 @@
 </div>
 
 <div>
-  <form class="form" action="ABCD3">
-    <label>Informe o código da ação que deseja: </label>
-    <input class="but-input" type='text' name='ABCD3' placeholder="ABCD3">
+
+<div>
+  <form class="form">
     <div>
-      <button class="but-card" type="submit">Pesquisar</button>
+      <button class="but-card" ng-model="list()" ng-init="list()=false">Atualizar</button>
         </div>
   </form>
 </div>
 
   
 <div id="fontes">
-    <p>Abaixo será calculado e exibido os rendimentos em R$ e % respectivamente.</p>
+    <p>Abaixo será exibido as informações.</p>
 
 </div>
 
 
 
-<table>
+<table id='customers'>
   <tr>
-    <th>Company</th>
+    <th>Dados da sua carteira</th>
   </tr>
-  <tr *ngFor="let CrudServices of data">
+
+  <tr *ngFor="let CrudServices of data$ | async">
     <td>{{CrudServices | json}}</td>
   </tr>
+
 </table>
 
 
@@ -43,7 +45,7 @@
 
 </div>
 
-
+</div>
 
 
 
