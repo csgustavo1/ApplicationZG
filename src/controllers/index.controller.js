@@ -12,10 +12,15 @@ const pool = new Pool({
 // Consulta em uma tabela 
 // data, tipo_operacao, quantidade, preco
 const getUsers = async (req, res) => {
-  const response = await pool.query("SELECT * FROM user_trade ");
+  const response = await pool.query("SELECT data, preco, valor_total, round(valor_total / preco * 100, 2) as RENDIMENTO from user_trade");
   res.json(response.rows);
 }
 
+
+//const getDados = async (req, res) => {
+  //const response = await pool.query("SELECT preco, valor_total, (valor_total / preco * 100) as RENDIMENTO from user_trade");
+  //res.json(response.rows);
+//}
 
 module.exports = {
   getUsers

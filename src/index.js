@@ -3,6 +3,7 @@ const app = express();
 var cors = require('cors');
 const { getUsers } = require('./controllers/index.controller');
 
+
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(require('./routes/index'));
