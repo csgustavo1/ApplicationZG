@@ -8,7 +8,7 @@ A aplicação está rodando na porta 4200 para Angular e porta 3000 para a API.
 
 O codigo do back end está no branch do master e a do front na branch main. 
 
-Foi uma boa experiência desenvolver esse CRUD,eu nunca havia trabalho com tecnologias como Angular ou nodejs sei que ainda falta implementar algumas funcionalidades e mudanças principalmente no back end. De qualquer forma obrigado pela oportunidade de aprendizado. 
+Foi uma boa experiência desenvolver esse CRUD,eu nunca havia trabalhado com tecnologias como Angular ou nodejs sei que ainda falta implementar algumas funcionalidades e mudanças principalmente no back end. De qualquer forma obrigado pela oportunidade de aprendizado. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
 
