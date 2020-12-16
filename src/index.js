@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(require('./routes/index'));
 app.use(cors({
-    origin:['http://localhost:4200','http://127.0.0.1:4200'],
+    origin:['http://localhost:4200','http://localhost:4200'],
     credentials:true
 }));
 
