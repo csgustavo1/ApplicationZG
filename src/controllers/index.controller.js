@@ -1,27 +1,27 @@
-const { Pool } = require('pg');
+const { Pool } = require("pg");
 
 const pool = new Pool({
-    host: 'localhost',
-    user: 'postgres',
-    password: 'gcs210rj',
-    database: 'bolsa',
-    port: '5432'
-
+  host: "localhost",
+  user: "postgres",
+  password: "gcs210rj",
+  database: "bolsa",
+  port: "5432",
 });
 
-// Consulta em uma tabela 
+// Consulta em uma tabela
 // data, tipo_operacao, quantidade, preco
-const getUsers = async (req, res) => {
-  const response = await pool.query("SELECT data, preco, valor_total, round(valor_total / preco * 100, 2) as RENDIMENTO from user_trade");
+const getUsers = async (test, res) => {
+  let parameter = res.req.query;
+  const response = await pool.query(
+    "SELECT instrument, preco, price, data, (((preco/price)-1)*100) AS PORCENTAGEM, valor_total FROM user_trade INNER JOIN instrument_quote ON simbol = instrument AND data = date where data BETWEEN '" +
+      parameter["data_inicio"] +
+      "' AND '" +
+      parameter["data_fim"] +
+      "'"
+  );
   res.json(response.rows);
-}
-
-
-//const getDados = async (req, res) => {
-  //const response = await pool.query("SELECT preco, valor_total, (valor_total / preco * 100) as RENDIMENTO from user_trade");
-  //res.json(response.rows);
-//}
+};
 
 module.exports = {
-  getUsers
-}
+  getUsers,
+};
