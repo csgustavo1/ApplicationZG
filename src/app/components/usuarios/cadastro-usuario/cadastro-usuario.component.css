@@ -28,14 +28,21 @@
     margin-bottom: 10px;
 }
 
-.card-group > button{
+.card-group > a{
+    
     background-color:#191919;
-    width: 100%;
+    width: 90%;
     border-radius: 30px;
+    justify-content: center;
     padding:15px;
     color:#50c878;
     font-style: italic;
     font-size: large;
+    display:flex;
+
+    
+   
+    
 }
 
 .card-group > label{
@@ -45,15 +52,21 @@
 
 }
 
-button{
+.a{
     cursor:pointer;
 }
 
-button:hover{
+.a:hover{
     background-color:#50c878;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     
   }
+
+a:active{
+    
+    box-shadow: 0 5px #666;
+    transform: translateY(5px);
+} 
 
 .card-group > input{
   border-radius: 5px;
