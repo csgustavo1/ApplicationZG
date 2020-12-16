@@ -1,56 +1,65 @@
-
-<div  id="borda">
-  
-    <h1>ZG INVEST</h1>
-    <br>
-    <p>SEJA BEM VINDO A SUA CARTEIRA DE INVESTIMENTO!</p>
+<div id="borda">
+  <h1>ZG INVEST</h1>
+  <br />
+  <p>SEJA BEM VINDO A SUA CARTEIRA DE INVESTIMENTO!</p>
 </div>
 
 <div>
+  <div class="col-md-12">
+    <div class="col-md-4">
+      <label class="label">Data Inicio</label>
+      <input
+        [imask]="{ mask: '0000-00-00' }"
+        placeholder="yyyy-MM-dd"
+        type="text"
+        [(ngModel)]="dados.data_inicio"
+      />
+    </div>
+    <div class="col-md-4">
+      <label class="label">Data fim</label>
+      <input
+        type="text"
+        [imask]="{ mask: '0000-00-00' }"
+        placeholder="yyyy-MM-dd"
+        [(ngModel)]="dados.data_fim"
+      />
+    </div>
+  </div>
+  <div class="form">
+    <button class="but-card" (click)="buttonPress()">BUSCAR</button>
+  </div>
 
-<div>
-  <form class="form">
-    <div>
-      <button class="but-card" ng-model="list()" ng-init="list()=false">Atualizar</button>
-        </div>
-  </form>
-</div>
-
-  
-<div id="fontes">
+  <div id="fontes">
     <p>Abaixo será exibido as informações.</p>
+  </div>
 
+  <table id="customers">
+    <tr>
+      <th colspan="6">Dados da sua carteira</th>
+    </tr>
+
+    <tr *ngIf="result.length > 0">
+      <td>Preço usuário</td>
+      <td>Valor da bolsa</td>
+      <td>Data</td>
+      <td>Tipo Ação</td>
+      <td>Rendimento</td>
+      <td>R$</td>
+    </tr>
+
+    <tr *ngFor="let CrudServices of result">
+      <td>
+        {{ CrudServices.preco }}
+      </td>
+      <td>{{ CrudServices.price }}</td>
+      <td>{{ CrudServices.data | date: "dd/MM/yyyy" }}</td>
+      <td>{{ CrudServices.instrument }}</td>
+      <td>{{ round(CrudServices.porcentagem) }} %</td>
+      <td>R$ {{ calcula(CrudServices) }}</td>
+    </tr>
+  </table>
+
+  <div>
+    <form></form>
+  </div>
 </div>
-
-
-
-<table id='customers'>
-  <tr>
-    <th>Dados da sua carteira</th>
-  </tr>
-
-  <tr *ngFor="let CrudServices of data$ | async">
-    <td>{{CrudServices | json}}</td>
-  </tr>
-
-</table>
-
-
-<div>
-    <form>   
-          
-    </form>
-
-   
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-

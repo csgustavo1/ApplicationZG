@@ -16,6 +16,19 @@
     
 }
 
+.col-md-12{
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.label {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  color: white;
+  display: block;
+}
+
 .sombra:hover{
     transition-property: all;
 }
